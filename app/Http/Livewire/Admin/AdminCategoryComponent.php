@@ -12,8 +12,14 @@ class AdminCategoryComponent extends Component
     public function deleteCategory($id)
     {
         $category = Category::findOrFail($id);
-        $category->delete();
-        session()->flash('message','Category deleted');
+        $product = Product::findOrFail($id);
+        if($product){
+            session()->flash('',' Catgory not deleted, it is related to one or more products')
+        }
+        else{
+            $category->delete();
+            session()->flash('message','Category deleted');
+        }
     }
 
     public function render()
