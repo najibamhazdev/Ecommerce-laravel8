@@ -101,6 +101,7 @@
                                                 <ul class="top-links-sub-menu">
                                                     <li class="top-links-item"><a href="{{ route('admin.dashboard') }}"> Dashboard 1</a></li>
                                                     <li class="top-links-item"><a href="{{ route('admin.categories') }}"> Categories</a></li>
+													<li class="top-links-item"><a href="{{ route('admin.products') }}"> Products</a></li>
 													<li class="top-links-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('lougoutFormAdmin').submit();"> Logout</a>
                                                     <form action="{{ route('logout') }}" id="lougoutFormAdmin" method="Post">
                                                         @csrf
