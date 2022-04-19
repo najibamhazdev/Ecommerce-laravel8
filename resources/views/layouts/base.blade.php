@@ -100,7 +100,9 @@
                                             <li class="top-links-item"><a href="#">My Account ({{Auth::user()->name}})</a>
                                                 <ul class="top-links-sub-menu">
                                                     <li class="top-links-item"><a href="{{ route('admin.dashboard') }}"> Dashboard 1</a></li>
-                                                    <li class="top-links-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('lougoutFormAdmin').submit();"> Logout</a>
+                                                    <li class="top-links-item"><a href="{{ route('admin.categories') }}"> Categories</a></li>
+													<li class="top-links-item"><a href="{{ route('admin.products') }}"> Products</a></li>
+													<li class="top-links-item"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('lougoutFormAdmin').submit();"> Logout</a>
                                                     <form action="{{ route('logout') }}" id="lougoutFormAdmin" method="Post">
                                                         @csrf
                                                     </form></li>
@@ -238,110 +240,15 @@
 									
 								</li>
 								
-								<li class="menu-item mega-menu"><a class="menu-link" href="#"><div>Men</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Footwear</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sports shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Flip Flops</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Slippers</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sports Sandals</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Party Shoes</div></a></li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Clothing</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shirts</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>T-Shirts</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Collared Tees</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Pants / Trousers</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Ethnic Wear</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Jeans</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sweamwear</div></a></li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Accessories</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>Bags &amp; Backpacks</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Watches</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sunglasses</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Wallets</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Caps &amp; Hats</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Jewellery</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Belts, Ties</div></a></li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>New Arrivals</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>T-Shirts</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Accessories</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Watches</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Perfumes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Belts, Ties</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shirts</div></a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div>Women</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-lg-6">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Footwear</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Formal Shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sports shoes</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Flip Flops</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Slippers</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sports Sandals</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Party Shoes</div></a></li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-6">
-													<li class="menu-item mega-menu-title"><a class="menu-link" href="#"><div>Clothing</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item"><a class="menu-link" href="#"><div>Casual Shirts</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>T-Shirts</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Collared Tees</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Pants / Trousers</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Ethnic Wear</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Jeans</div></a></li>
-															<li class="menu-item"><a class="menu-link" href="#"><div>Sweamwear</div></a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Accessories</div><span>Awesome Works</span></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Sale</div><span>Awesome Works</span></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Blog</div><span>Latest News</span></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Videos</div><span>Latest News</span></a></li>
+								
+								<li class="menu-item"><a class="menu-link" href="{{route('product.cart')}}"><div>Cart</div><span>Awesome Works</span></a></li>
+								
 								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div><span>Get In Touch</span></a></li>
 							</ul>
 
 						</nav>
 
-						@livewire('search-component');
+						@livewire('search-component')
 
 					</div>
 				</div>

@@ -27,8 +27,8 @@
 								<div class="product col-md-4 col-sm-6 col-12">
 									<div class="grid-inner">
 										<div class="product-image">
-											<a href="{{route('product.details',['slug' => $product->slug])}}"><img src="{{ asset('images/shop/dress') }}/{{$product->image}}" alt="{{$product->name}}"></a>
-											<a href="{{route('product.details',['slug' => $product->slug])}}"><img src="{{ asset('images/shop/dress/1-1.jpg') }}" alt="Checked Short Dress"></a>
+											<a href="{{route('product.details',['slug' => $product->slug])}}"><img src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{$product->name}}"></a>
+											<a href="{{route('product.details',['slug' => $product->slug])}}"><img src="{{ asset('assets/images/products')}}/{{$product->image2}} " alt="{{$product->name}}"></a>
 											@if($product->stock_status=="instock")
                                             @if($product->quantity <=5 )
                                             <div class="sale-flash badge bg-warning p-2">{{$product->quantity}} left</div>

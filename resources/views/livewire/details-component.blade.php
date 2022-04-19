@@ -30,9 +30,9 @@
 										<div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true">
 											<div class="flexslider">
 												<div class="slider-wrap" data-lightbox="gallery">
-													<div class="slide" data-thumb="{{ asset('images/shop/dress') }}/{{$product->image}}"><a href="{{ asset('images/shop/dress') }}/{{$product->image}}" title="{{ $product->name }} - Front View" data-lightbox="gallery-item"><img src="{{ asset('images/shop/dress') }}/{{$product->image}}" alt="{{ $product->name }}"></a></div>
-													<div class="slide" data-thumb="{{ asset('images/shop/thumbs/dress/3-1.jpg') }}"><a href="{{ asset('images/shop/dress/3-1.jpg') }}" title="{{ $product->name }} - Side View" data-lightbox="gallery-item"><img src="{{ asset('images/shop/dress/3-1.jpg') }}" alt="{{ $product->name }}"></a></div>
-													<div class="slide" data-thumb="{{ asset('images/shop/thumbs/dress/3-2.jpg') }}"><a href="{{ asset('images/shop/dress/3-2.jpg') }}" title="{{ $product->name }} - Back View" data-lightbox="gallery-item"><img src="{{ asset('images/shop/dress/3-2.jpg') }}" alt="{{ $product->name }}"></a></div>
+													<div class="slide" data-thumb="{{ asset('assets/images/products') }}/{{$product->image}}"><a href="{{ asset('assets/images/products') }}/{{$product->image}}" title="{{ $product->name }} - Front View" data-lightbox="gallery-item"><img src="{{ asset('assets/images/products') }}/{{$product->image}}" alt="{{ $product->name }}"></a></div>
+													<div class="slide" data-thumb="{{ asset('images/shop/thumbs/dress/3-1.jpg') }}"><a href="{{ asset('assets/images/products/3-1.jpg') }}" title="{{ $product->name }} - Side View" data-lightbox="gallery-item"><img src="{{ asset('assets/images/products/3-1.jpg') }}" alt="{{ $product->name }}"></a></div>
+													<div class="slide" data-thumb="{{ asset('images/shop/thumbs/dress/3-2.jpg') }}"><a href="{{ asset('assets/images/products/3-2.jpg') }}" title="{{ $product->name }} - Back View" data-lightbox="gallery-item"><img src="{{ asset('assets/images/products/3-2.jpg') }}" alt="{{ $product->name }}"></a></div>
 												</div>
 											</div>
 										</div>
@@ -344,8 +344,8 @@
 							<div class="oc-item">
 								<div class="product">
 									<div class="product-image">
-										<a href="#"><img src="{{ asset('images/shop/dress') }}/{{$rel_prod->image}}" alt="{{$rel_prod->name}}"></a>
-										<a href="#"><img src="{{ asset('images/shop/dress') }}/{{$rel_prod->image}}" alt="{{$rel_prod->name}}"></a>
+										<a href="#"><img src="{{ asset('assets/images/products') }}/{{$rel_prod->image}}" alt="{{$rel_prod->name}}"></a>
+										<a href="#"><img src="{{ asset('assets/images/products') }}/{{$rel_prod->image}}" alt="{{$rel_prod->name}}"></a>
 										<div class="badge bg-success p-2">50% Off*</div>
 										<div class="bg-overlay">
 											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
@@ -369,114 +369,7 @@
 								</div>
 							</div>
                             @endforeach
-							<!-- <div class="oc-item">
-								<div class="product">
-									<div class="product-image">
-										<a href="#"><img src="{{ asset('images/shop/pants/1-1.jpg') }}" alt="Slim Fit Chinos"></a>
-										<a href="#"><img src="{{ asset('images/shop/pants/1.jpg') }}" alt="Slim Fit Chinos"></a>
-										<div class="bg-overlay">
-											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-												<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-cart"></i></a>
-												<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-											</div>
-											<div class="bg-overlay-bg bg-transparent"></div>
-										</div>
-									</div>
-									<div class="product-desc center">
-										<div class="product-title"><h3><a href="#">Slim Fit Chinos</a></h3></div>
-										<div class="product-price">$39.99</div>
-										<div class="product-rating">
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star-half-full"></i>
-											<i class="icon-star-empty"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="oc-item">
-								<div class="product">
-									<div class="product-image">
-										<a href="#"><img src="{{ asset('images/shop/shoes/1-1.jpg') }}" alt="Dark Brown Boots"></a>
-										<a href="#"><img src="{{ asset('images/shop/shoes/1.jpg') }}" alt="Dark Brown Boots"></a>
-										<div class="bg-overlay">
-											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-												<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-cart"></i></a>
-												<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-											</div>
-											<div class="bg-overlay-bg bg-transparent"></div>
-										</div>
-									</div>
-									<div class="product-desc center">
-										<div class="product-title"><h3><a href="#">Dark Brown Boots</a></h3></div>
-										<div class="product-price">$49</div>
-										<div class="product-rating">
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star-empty"></i>
-											<i class="icon-star-empty"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="oc-item">
-								<div class="product">
-									<div class="product-image">
-										<a href="#"><img src="{{ asset('images/shop/dress/2.jpg') }}" alt="Light Blue Denim Dress"></a>
-										<a href="#"><img src="{{ asset('images/shop/dress/2-2.jpg') }}" alt="Light Blue Denim Dress"></a>
-										<div class="bg-overlay">
-											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-												<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-cart"></i></a>
-												<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-											</div>
-											<div class="bg-overlay-bg bg-transparent"></div>
-										</div>
-									</div>
-									<div class="product-desc center">
-										<div class="product-title"><h3><a href="#">Light Blue Denim Dress</a></h3></div>
-										<div class="product-price">$19.95</div>
-										<div class="product-rating">
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star-empty"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="oc-item">
-								<div class="product">
-									<div class="product-image">
-										<a href="#"><img src="{{ asset('images/shop/sunglasses/1.jpg') }}" alt="Unisex Sunglasses"></a>
-										<a href="#"><img src="{{ asset('images/shop/sunglasses/1-1.jpg') }}" alt="Unisex Sunglasses"></a>
-										<div class="badge bg-success p-2">Sale!</div>
-										<div class="bg-overlay">
-											<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-												<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-cart"></i></a>
-												<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-											</div>
-											<div class="bg-overlay-bg bg-transparent"></div>
-										</div>
-									</div>
-									<div class="product-desc center">
-										<div class="product-title"><h3><a href="#">Unisex Sunglasses</a></h3></div>
-										<div class="product-price"><del>$19.99</del> <ins>$11.99</ins></div>
-										<div class="product-rating">
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star3"></i>
-											<i class="icon-star-empty"></i>
-											<i class="icon-star-empty"></i>
-										</div>
-									</div>
-								</div>
-							</div> -->
+							
 
 						</div>
 
